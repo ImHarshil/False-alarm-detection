@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-	return render_template('testindex.html')
+	return render_template('index.html')
 
 @app.route('/train')
 def train():
@@ -88,4 +88,4 @@ def testing():
 def testing2():
 	return jsonify({'Recommendation':str(request.form)})
 
-app.run(port=4000,debug=True)
+app.run(port=4000,debug=False)
